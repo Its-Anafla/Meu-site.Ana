@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início | Ana Flávia Peixoto</title>
+    <!-- Importando fontes caligráficas e modernas -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Quicksand:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f7f4ed;
+            --folder-color: #e6d9c3;
+            --folder-shadow: #c8bcab;
+            --paper-bg: #fffdf9;
+            --accent-purple: #b59ccf;
+            --dark-purple: #523e5c;
+            --text-main: #3d3d3d;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Menu de Navegação Superior */
+        nav {
+            background-color: #fff;
+            width: 100%;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            padding: 8px 24px;
+            border-radius: 20px;
+            transition: 0.3s;
+            background: #fff;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: var(--accent-purple);
+            color: white;
+            border-color: var(--accent-purple);
+        }
+
+        /* Estrutura da Pasta Vintage (Inspirada na Referência) */
+        .folder-container {
+            width: 85%;
+            max-width: 750px;
+            background-color: var(--folder-color);
+            margin: 50px auto 30px auto;
+            border-radius: 4px 12px 12px 4px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12), inset -10px 0 20px rgba(0,0,0,0.03);
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            border: 2px solid var(--folder-shadow);
+        }
+
+        /* Aba lateral da pasta */
+        .folder-container::before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: 40px;
+            width: 180px;
+            height: 25px;
+            background-color: var(--folder-color);
+            border-top: 2px solid var(--folder-shadow);
+            border-left: 2px solid var(--folder-shadow);
+            border-right: 2px solid var(--folder-shadow);
+            border-radius: 6px 6px 0 0;
+        }
+
+        /* Efeito de folha de caderno / papel colado */
+        .notebook-paper {
+            background-color: var(--paper-bg);
+            background-image: linear-gradient(#e1dcd3 1px, transparent 1px);
+            background-size: 100% 28px;
+            padding: 40px 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            position: relative;
+            border: 1px solid #dcd5cc;
+            transform: rotate(-1deg);
+            margin: 10px auto;
+        }
+
+        /* Tachinha decorativa no topo do papel */
+        .pin {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: radial-gradient(circle at 30% 30%, #d4b2e8, #73518a);
+            border-radius: 50%;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+
+        /* Título Principal com estilo manuscrito/elegante */
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 68px;
+            color: var(--dark-purple);
+            font-style: italic;
+            margin: 0;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        /* Caixa de identificação com seu nome embaixo */
+        .name-tag {
+            background: #fff;
+            display: inline-block;
+            padding: 8px 30px;
+            border-radius: 4px;
+            margin-top: 25px;
+            font-size: 16px;
+            border: 1px solid #d5ccd1;
+            color: var(--dark-purple);
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transform: rotate(1deg);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #888;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu de Navegação -->
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="sobre.html">About me</a>
+        <a href="interesses.html">Interests</a>
+        <a href="contato.html">Contact</a>
+    </nav>
+
+    <!-- Capa Estilo Pasta com Folha de Caderno -->
+    <div class="folder-container">
+        <div class="notebook-paper">
+            <div class="pin"></div>
+            <h1 class="hero-title">Meu Site</h1>
+        </div>
+        <div class="name-tag">Ana Flávia dos Santos Peixoto</div>
+    </div>
+
+    <footer>
+        <p>© 2026 — Ana Flávia dos Santos Peixoto | Ciência da Computação (Unifal-MG)</p>
+    </footer>
+
+</body>
+</html>
